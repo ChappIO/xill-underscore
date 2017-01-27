@@ -53,10 +53,10 @@ function Object(object) {
 }
 
 /**
- * This function executes a method without any parameters. It is equivalent to calling _(fn, null).
+ * This function executes a method without any parameters. It is equivalent to calling _(fn, []).
  */
 function _(fn) {
-    return _(fn, null);
+    return _(fn, []);
 }
 
 /**

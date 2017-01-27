@@ -1,2 +1,74 @@
 Underscore
 ==========
+Thomas Biesaart <thomas.biesaart@gmail.com>
+:toc: left
+:sectnums:
+:sectlinks:
+:chapter-label:
+:icons: font
+:highlightjs-theme: googlecode
+
+Xill is a programming language developed by Xillio. It is extremely easy to learn as it includes very few
+advanced features. However, for someone who is used to developing with object oriented languages it can be
+quite a switch. The goal of the Underscore library is to allow developers to think about solutions in an
+object oriented way.
+
+[discrete]
+= Introduction to Underscore
+
+Underscore is a single-file library that can be included into any project to enable object oriented programming.
+It exposes simple features that form the base of a way of working. We do NOT consider it a framework, but
+rather a tool that can be used independent of the project you are working on.
+
+== Installation
+
+To install Underscore you:
+
+. Download the link:https://github.com/ChappIO/xill-underscore/releases[latest version of the library^].
+. Extract the `Underscore` folder to your project so that you have a `lib` folder it your project root.
+
+== Create Your First Class
+
+Now you are good to go. Below you can see an example of how to create a class. Let's take a look at
+how it works.
+
+```javascript
+include::_examples/MessagePrinter.xill[]
+```
+
+<1> First we include the Underscore library
+<2> We define our `MessagePrinter` by creating a public function. This function is
+    called a _constructor_ for the class since it constructs a new instance of the class.
+<3> Use the `Object` function from the Underscore library to define a class.
+<4> Our `MessagePrinter` requires some fields. It is good practice to declare your fields at the
+    start of your class. This way you will always have an overview of the available objects.
+<5> Methods are defined using the combination of `_method` and `_()`. This combination of functions
+    builds an executable method that can be used by the Underscore library. The most important
+    part of this instruction is the reference to `print`. This assigns the implementation of
+    the function below to the new `MessagePrinter` making `print` a method.
+<6> Here we declare our `print` function. It is good practice to make this function _private_
+    so that it does not pollute the scope of all libraries that include your classes.
+<7> The input of all methods contains a reference to the object called `this`.
+<8> All passed arguments are provided in the `args` field of the input object.
+<9> And finally we can the `this` and the provided input to perform an operation. In this case
+    we print the message.
+
+== Using Your First Class
+
+Congratulations! You have created your class. But it is of no use if you do not know how to
+use it. So let's take a look at that.
+
+```javascript
+include::_examples/UsingMessagePrinter.xill[]
+```
+
+<1> First things first, you are going to have to include the library in which you defined
+    your class.
+<2> Then you can call the constructor to create a new instance of that class.
+<3> And this is where Underscore's magic comes in. Use the `_` function to call a method
+    and provide a list of arguments.
+
+If everything went well you will now see a message in the console:
+
+    Hello: This is my message!
+

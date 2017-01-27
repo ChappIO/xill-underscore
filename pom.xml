@@ -24,6 +24,8 @@
     <groupId>io.chapp.xill</groupId>
     <artifactId>underscore</artifactId>
     <version>1.0.0-SNAPSHOT</version>
+    <name>Underscore</name>
+    <description>Object Oriented Programming in Xill</description>
     <inceptionYear>2017</inceptionYear>
     <packaging>pom</packaging>
 
@@ -45,6 +47,7 @@
                         <exclude>.gitattributes</exclude>
                         <exclude>LICENSE</exclude>
                         <exclude>**/LICENSE</exclude>
+                        <exclude>**/_examples/**</exclude>
                     </excludes>
                     <mapping>
                         <xill>JAVADOC_STYLE</xill>

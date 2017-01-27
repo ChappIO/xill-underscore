@@ -1,0 +1,24 @@
+use System;
+include lib.Underscore;                         // <1>
+
+/**
+ * This printer will add a suffix and a
+ * prefix to messages before printing it.
+ */
+function MessagePrinter(prefix, suffix) {       // <2>
+    return Object({                             // <3>
+        "prefix": prefix,                       // <4>
+        "suffix": suffix,
+
+        "print": _method(map<print>(_()))       // <5>
+    });
+}
+
+private function print(input) {                 // <6>
+    var this = input.this;                      // <7>
+    var message = input.args[0];                // <8>
+
+    System.print(
+        this.prefix :: message :: this.suffix   // <9>
+    );
+}
