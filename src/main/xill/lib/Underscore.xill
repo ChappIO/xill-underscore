@@ -1,0 +1,89 @@
+/**
+ * Copyright © 2017 Thomas Biesaart (thomas.biesaart@gmail.com)
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+use Collection, Assert, System;
+
+var workingVariable;
+var this;
+
+/**
+ * This function provides an infinite iterator. This iterator can be used to map a function creating
+ * an executable variable function. Use this in combination with _method.
+ *
+ * Usage: _function(map<myConcreteImplementation>(_()));
+ *
+ */
+function _() {
+    return map<executeWithInput>(Collection.range(0, 1/0));
+}
+
+/**
+ * This function constructs a method out of a function reference. Use this in combination with _().
+ *
+ */
+function _method(fn) {
+    return {
+        "fn": fn,
+        "obj": "undefined"
+    };
+}
+
+/**
+ * This function represents the base of all Object types. Call it to create an object with no inherited functions.
+ */
+function Object(object) {
+    foreach(name, value in object) {
+        if(System.typeOf(value) == OBJECT && value.obj == "undefined") {
+            value.obj = object;
+        }
+    }
+    return object;
+}
+
+/**
+ * This function executes a method without any parameters. It is equivalent to calling _(fn, null).
+ */
+function _(fn) {
+    return _(fn, null);
+}
+
+/**
+ * This function executes a method with a list of parameters and returns its result.
+ */
+function _(fn, args) {
+    do {
+        workingVariable = args;
+        this = fn.obj;
+        
+        foreach(value in fn.fn) {
+            return value;
+        }
+    } finally {
+        workingVariable = null;
+        this = null;
+    }
+    
+    if(fn.fn != null) {
+        Assert.error("Function has no usages left!");
+    }
+}
+
+private function executeWithInput(raw) {
+    return {
+        "args": workingVariable,
+        "this": this,
+        "invocationCount": raw + 1
+    };
+}
