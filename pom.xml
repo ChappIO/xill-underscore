@@ -50,6 +50,7 @@
                         <exclude>LICENSE</exclude>
                         <exclude>**/LICENSE</exclude>
                         <exclude>**/_examples/**</exclude>
+                        <exclude>docs/</exclude>
                     </excludes>
                     <mapping>
                         <xill>JAVADOC_STYLE</xill>
