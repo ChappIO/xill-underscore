@@ -24,10 +24,12 @@
     <groupId>io.chapp.xill</groupId>
     <artifactId>underscore</artifactId>
     <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
     <name>Underscore</name>
     <description>Object Oriented Programming in Xill</description>
+    <url>https://github.com/ChappIO/xill-underscore</url>
     <inceptionYear>2017</inceptionYear>
-    <packaging>pom</packaging>
 
     <build>
         <plugins>
@@ -79,6 +81,7 @@
                     <sourceDocumentName>index.adoc</sourceDocumentName>
                     <doctype>book</doctype>
                     <sourceHighlighter>highlight.js</sourceHighlighter>
+                    <outputDirectory>${project.basedir}/docs</outputDirectory>
                 </configuration>
                 <executions>
                     <execution>
