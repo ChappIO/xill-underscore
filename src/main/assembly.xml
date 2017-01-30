@@ -29,7 +29,7 @@
     </files>
     <fileSets>
         <fileSet>
-            <directory>${build.directort}/generated-docs</directory>
+            <directory>${project.basedir}/docs</directory>
             <outputDirectory>docs</outputDirectory>
             <excludes>
                 <exclude>**/_*/**</exclude>

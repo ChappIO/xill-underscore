@@ -93,7 +93,7 @@
                         <goals>
                             <goal>process-asciidoc</goal>
                         </goals>
-                        <phase>generate-resources</phase>
+                        <phase>clean</phase>
                         <configuration>
                             <backend>html</backend>
                         </configuration>
