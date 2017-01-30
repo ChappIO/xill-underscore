@@ -5,4 +5,4 @@ var printer = MessagePrinter(               // <2>
     "!"
 );
 
-_(printer.print, ["This is my message"]);   // <3>
+_(printer.print, "This is my message");   // <3>

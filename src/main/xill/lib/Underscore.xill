@@ -53,16 +53,9 @@ function Object(object) {
 }
 
 /**
- * This function executes a method without any parameters. It is equivalent to calling _(fn, []).
- */
-function _(fn) {
-    return _(fn, []);
-}
-
-/**
  * This function executes a method with a list of parameters and returns its result.
  */
-function _(fn, args) {
+function __(fn, args) {
     do {
         workingVariable = args;
         this = fn.obj;
@@ -78,6 +71,93 @@ function _(fn, args) {
     if(fn.fn != null) {
         Assert.error("Function has no usages left!");
     }
+}
+
+/**
+ * This function executes a method without any parameters. It is equivalent to calling _(fn, []).
+ */
+function _(fn) {
+    return __(fn, []);
+}
+
+function _(fn, arg0) {
+    return __(fn, [arg0]);
+}
+
+function _(fn, arg0, arg1) {
+    return __(fn, [arg0, arg1]);
+}
+
+function _(fn, arg0, arg1, arg2) {
+    return __(fn, [arg0, arg1, arg2]);
+}
+
+function _(fn, arg0, arg1, arg2, arg3) {
+    return __(fn, [arg0, arg1, arg2, arg3]);
+}
+
+function _(fn, arg0, arg1, arg2, arg3, arg4) {
+    return __(fn, [arg0, arg1, arg2, arg3, arg4]);
+}
+
+function _(fn, arg0, arg1, arg2, arg3, arg4, arg5) {
+    return __(fn, [arg0, arg1, arg2, arg3, arg4, arg5]);
+}
+
+function _(fn, arg0, arg1, arg2, arg3, arg4, arg5, arg6) {
+    return __(fn, [arg0, arg1, arg2, arg3, arg4, arg5, arg6]);
+}
+
+function _(fn, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) {
+    return __(fn, [arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7]);
+}
+
+function _(fn, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8) {
+    return __(fn, [arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8]);
+}
+
+function _(fn, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9) {
+    return __(fn, [arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9]);
+}
+
+function _(fn, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10) {
+    return __(fn, [arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10]);
+}
+
+function _(fn, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11) {
+    return __(fn, [arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11]);
+}
+
+function _(fn, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12) {
+    return __(fn, [arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12]);
+}
+
+function _(fn, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13) {
+    return __(fn, [arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13]);
+}
+
+function _(fn, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14) {
+    return __(fn, [arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14]);
+}
+
+function _(fn, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15) {
+    return __(fn, [arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15]);
+}
+
+function _(fn, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16) {
+    return __(fn, [arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16]);
+}
+
+function _(fn, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17) {
+    return __(fn, [arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17]);
+}
+
+function _(fn, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18) {
+    return __(fn, [arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18]);
+}
+
+function _(fn, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19) {
+    return __(fn, [arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, arg17, arg18, arg19]);
 }
 
 private function executeWithInput(raw) {
